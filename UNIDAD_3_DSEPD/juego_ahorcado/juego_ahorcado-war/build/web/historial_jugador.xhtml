@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            <h:form>
+                        <h1><h:outputText value="Historial de Juego"/></h1>
+                        <h:dataTable value="#{ahorcado.hist_jugador}" var="item"> <!-- #ahorcado.ver_historial_jugador()} -->
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="IdJuego"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idJuegousu}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentos restantes"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentosr}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentos totales"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentost}"/>
+                            </h:column>   
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="%Efectividad"/>
+                                </f:facet>
+                                <h:outputText value="#{ahorcado.porcentaje_efectividad(item.intentosr,item.intentost)}"/>
+                            </h:column> 
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Fecha Juego"/>
+                                </f:facet>
+                                <h:outputText value="#{item.fechaHora}">
+                                    <f:convertDateTime pattern="MM/dd/yyyy" />
+                                </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Palabra"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idpalabra.palabra}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Nivel"/>
+                                </f:facet>
+                                <h:outputText value="#{ahorcado.nombre_nivel(item.idpalabra.nivel)}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Usuario"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idusuario.nombre}"/>
+                            </h:column>
+                        </h:dataTable>
+                        <br/>
+                        <h:commandLink value="Regresar" action="menu_jugador.xhtml" />
+                        <br/>
+                        <h:commandLink value="Index" action="index.xhtml" actionListener="#{ahorcado.reiniciar()}" />
+                    </h:form>
+
+        </center>
+    </h:body>
+</html>
+

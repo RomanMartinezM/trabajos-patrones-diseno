@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/template_tipoac.xhtml">
+
+            <ui:define name="encabezado">
+                <center>
+                    Tipo de actividad
+                </center>
+                
+            </ui:define>
+
+            <ui:define name="contenido">
+                <center>
+                    <f:view>
+
+
+                        <h:form>
+                            <h1><h:outputText value="Registro Tipo Actividad"/></h1>
+                            <h:panelGrid columns="2">
+                                <h:outputLabel value="Descripcion:" for="descripcion" />
+                                <h:inputText id="descripcion" value="#{salud.tipoactividad.descripcion}" title="Descripcion" />
+                                <h:outputLabel value="Factorh:" for="factorh" />
+                                <h:inputText id="factorh" value="#{salud.tipoactividad.factorh}" title="Factorh" />
+                                <h:outputLabel value="Factorm:" for="factorm" />
+                                <h:inputText id="factorm" value="#{salud.tipoactividad.factorm}" title="Factorm" />
+                            </h:panelGrid>
+                            <h:commandButton value="Guardar" actionListener="#{salud.registrar_tipoActividad}"/>
+                            <br/>
+                            <h:commandLink value="Index" action="index.xhtml" />
+                            
+                            
+
+
+                            <h:form>
+                                <h1><h:outputText value="List"/></h1>
+                                <h:dataTable value="#{salud.lista_tipoact()}" var="item">
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="IdTipoA"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.idTipoA}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Descripcion"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.descripcion}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Factorh"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.factorh}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Factorm"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.factorm}"/>
+                                    </h:column>
+                                </h:dataTable>
+                            </h:form>
+
+                            
+                        </h:form>
+                    </f:view>
+                    
+                </center>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

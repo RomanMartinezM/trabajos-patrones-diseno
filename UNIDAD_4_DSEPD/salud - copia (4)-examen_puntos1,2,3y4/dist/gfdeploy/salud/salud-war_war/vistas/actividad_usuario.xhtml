@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/template_1.xhtml">
+
+            <ui:define name="encabezado">
+                Actividad usuario
+            </ui:define>
+
+            <ui:define name="contenido">
+                <center>
+                    <f:view>
+
+
+                        <h:form>
+                            <h1><h:outputText value="Actividad Usuario"/></h1>
+                            <h:panelGrid columns="2">
+                                <h:outputLabel value="Descripcion:" for="descripcion" />
+                                <h:inputText id="descripcion" value="#{salud.actividadusuario.descripcion}" title="Descripcion" required="false"/>
+                                <h:outputLabel value="Fecha1:" for="fecha1" />
+                                <h:inputText id="fecha1" value="#{salud.actividadusuario.fecha1}" title="Fecha1" required="false" requiredMessage="yyyy/MM/dd">
+                                    <f:convertDateTime pattern="yyyy/MM/dd" timeZone="America/Mexico_city"/>
+                                </h:inputText>
+                                <h:outputLabel value="Fecha2:" for="fecha2" />
+                                <h:inputText id="fecha2" value="#{salud.actividadusuario.fecha2}" title="Fecha2" required="false" requiredMessage="yyyy/MM/dd">
+                                    <f:convertDateTime pattern="yyyy/MM/dd" timeZone="America/Mexico_city"/>
+                                </h:inputText>
+                                <h:outputLabel value="Ta:" for="ta" />
+                                <h:selectOneMenu id="ta" value="#{salud.tipoactividad.idTipoA}" title="Ta" >
+                                    <!-- TODO: update below reference to list of available items-->
+                                    <f:selectItems value="#{salud.lista_tipoact()}" var="vtipoac" itemLabel="#{vtipoac.descripcion}" itemValue="#{vtipoac.idTipoA}"/>
+                                </h:selectOneMenu>
+                                <h:outputLabel value="IdUsuar:" for="idUsuar" />
+                                <h:selectOneMenu id="idUsuar" value="#{salud.usuarios.idUsuario}" title="IdUsuar" >
+                                    <!-- TODO: update below reference to list of available items-->
+                                    <f:selectItems value="#{salud.lista_u()}" var="vusuario" itemLabel="#{vusuario.nombre}" itemValue="#{vusuario.idUsuario}"/>
+                                </h:selectOneMenu>
+                            </h:panelGrid>
+                            <h:commandButton value="Guardar" actionListener="#{salud.registrar_actusuario}"/>
+                            <br/> 
+                            <h:commandLink value="Index" action="index.xhtml" />
+
+
+
+
+
+                            <h:form>
+                                <h1><h:outputText value="List"/></h1>
+                                <h:dataTable value="#{salud.lista_ActUsuario()}" var="item">
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="IdActusu"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.idActusu}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Descripcion"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.descripcion}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Fecha1"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.fecha1}">
+                                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                                        </h:outputText>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Fecha2"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.fecha2}">
+                                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                                        </h:outputText>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Ta"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.ta.descripcion}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="IdUsuar"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.idUsuar.nombre}"/>
+                                    </h:column>
+                                </h:dataTable>
+                            </h:form>
+
+
+                        </h:form>
+                    </f:view>
+                    
+                </center> 
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

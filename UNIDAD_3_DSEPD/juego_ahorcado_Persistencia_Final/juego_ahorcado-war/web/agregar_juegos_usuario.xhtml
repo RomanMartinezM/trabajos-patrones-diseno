@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            <f:view>
+
+
+                <h:form>
+                    <h1><h:outputText value="Create/Edit"/></h1>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Intentosr:" for="intentosr" />
+                        <h:inputText id="intentosr" value="#{ahorcado.juegosusuario.intentosr}" title="Intentosr" />
+                        <h:outputLabel value="Intentost:" for="intentost" />
+                        <h:inputText id="intentost" value="#{ahorcado.juegosusuario.intentost}" title="Intentost" />
+                        <h:outputLabel value="Idpalabra:" for="idpalabra" />
+                        <h:selectOneMenu id="idpalabra" value="#{ahorcado.palabras.idPalabra}" title="Idpalabra" >
+                            <!-- TODO: update below reference to list of available items-->
+                            <f:selectItems value="#{ahorcado.lista_p()}" var="vpalabra" itemLabel="#{vpalabra.palabra}" itemValue="#{vpalabra.idPalabra}"/>
+                        </h:selectOneMenu>
+                        <h:outputLabel value="Idusuario:" for="idusuario" />
+                        <h:selectOneMenu id="idusuario" value="#{ahorcado.usuarios.idUsuario}" title="Idusuario" >
+                            <!-- TODO: update below reference to list of available items-->
+                            <f:selectItems value="#{ahorcado.lista_u()}" var="vusuario" itemLabel="#{vusuario.nombre}" itemValue="#{vusuario.idUsuario}"/>
+                        </h:selectOneMenu>
+                    </h:panelGrid>
+                    <h:commandButton value="Guardar" actionListener="#{ahorcado.agregar_ju}"/>
+                    <br/>
+                    <h:commandLink value="Menu" action="configurar.xhtml" />
+                    <br/>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Juegos Usuarios"/></h1>
+                        <h:dataTable value="#{ahorcado.lista_ju()}" var="item">
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="IdJuegousu"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idJuegousu}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentosr"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentosr}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentost"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentost}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="FechaHora"/>
+                                </f:facet>
+                                <h:outputText value="#{item.fechaHora}">
+                                    <f:convertDateTime pattern="MM/dd/yyyy" />
+                                </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Idpalabra"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idpalabra.palabra}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Idusuario"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idusuario.nombre}"/>
+                            </h:column>
+                        </h:dataTable>
+                    </h:form>
+
+                </h:form>
+            </f:view>
+        </center>
+    </h:body>
+</html>
+

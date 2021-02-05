@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/template_2.xhtml">
+
+            <ui:define name="titulo">
+                 Salud
+            </ui:define>
+
+            <ui:define name="encabezado">
+                Calcular kilocalorias
+            </ui:define>
+
+            <ui:define name="contenido">
+                <center>
+                         <h:form>
+                            <h1><h:outputText value="Proporcione los datos"/></h1>
+                            <br/><br/>
+                            <h:outputLabel value="Nombre:"/>
+                            <h:outputText id="nombre" value=" #{salud.usuario_logeado.nombre}" title="Nombre" /> <!-- #salud.nombre_persona}-->
+                            <br/>
+                            <h:outputLabel value="Fecha nacimiento:"/>
+                            <h:outputText id="fechanaci" value="#{salud.usuario_logeado.fechanac}" title="Fechanaci" /> <!--value="#salud.fecha_n}"--> 
+                            <br/>
+                            <h:outputLabel value="Estatura(cms):"></h:outputLabel> 
+                            <h:outputText id="estatura" value="#{salud.usuario_logeado.estatura}" /> <!--value="#salud.estatura}"--> 
+                            <br/>
+                            <h:outputLabel value="Peso(kgs):"></h:outputLabel> 
+                            <h:outputText id="peso" value="#{salud.antropometricos_ulogeado.peso}" />  <!--value="#salud.peso}"-->
+                            <br/>
+                            <h:outputLabel value="Sexo:"/>
+                            <h:outputText id="sexo" value="#{salud.usuario_logeado.sexo}" title="Sexo" />     <!--value="#salud.sexo}" t-->
+                            <br/>
+                            <h:outputLabel value="Actividad:"/>
+                            <h:selectOneMenu id="idUsu" value="#{salud.tipoactividad}" title="IdUsu" >
+                                <f:selectItems value="#{salud.lista_tipoact()}" var="vtipoac" itemLabel="#{vtipoac.descripcion}" itemValue="#{salud.factor}" actionListener="#{salud.seleccionar_factor(salud.tipoactividad, salud.usuario_logeado.sexo)}"/>    
+                            </h:selectOneMenu>
+                               
+                               <!--<h:outputLabel> Peso(kgs):</h:outputLabel> 
+                                <h:outputLabel id="peso" value="#salud.antropometricos_ulogeado.peso}" />-->    <!--value="#salud.peso}"-->                                
+        
+                            <h:commandButton value="Calcular calorias" actionListener="#{salud.calcular_kilocalorias()}"/>
+                            <br/>
+                            <h:outputLabel value="Kilocalorias que necesita #{salud.kilocalorias}"/>
+                            <br/>
+                            <h:commandLink value="Index" action="index.xhtml" />
+                        </h:form>
+                </center>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

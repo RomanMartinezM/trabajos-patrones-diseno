@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ActualizarJuegosUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/agregar_tipo_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/actualizar_tipo_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/Ahorcado.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/eliminar_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/AgregarPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ActualizarPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/login.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/agregar_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/index.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/EliminarTipoPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/AgregarUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/AgregarJuegosUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ListarPalabras.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ReglasNegocio.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/LoginU.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/actualizar_usuario.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/agregar_juegos_usuario.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ActualizarTipoPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/eliminar_usuario.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/eliminar_juegos_usuario.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ActualizarUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ListarTipos.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/controles/Controladora.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ListarJuegosUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/datos_juego.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/controles/UsuarioJpaController.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/agregar_usuario.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/eliminar_tipo_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/EliminarUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/EliminarJuegosUsuario.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/acceso.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/actualizar_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/ListarUsuarios.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/AgregarTipoPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/src/java/juego/EliminarPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion_AlmostFull_actual/web/actualizar_juegos_usuario.jsp</file>
+        </group>
+    </open-files>
+</project-private>

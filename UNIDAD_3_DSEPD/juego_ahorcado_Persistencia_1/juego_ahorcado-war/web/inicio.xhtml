@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+                <h:form>
+                    <h:outputLabel> DATOS DEL JUEGO</h:outputLabel>
+                    <br/><br/>
+                    <h:outputLabel> Usuario:</h:outputLabel>
+                    <h:inputText value="#{ahorcado.usuario}" requiredMessage="Nombre del usuario" />
+                    <br/><br/>
+                    <h:outputLabel> Número de intentos: </h:outputLabel>
+                    <h:inputText value="#{ahorcado.intentos}" requiredMessage="Numero de intentos" />
+                    <br/><br/>
+                    <h:commandButton value="Ingresar" action="juego_1.xhtml" />
+                </h:form>
+        </center>
+    </h:body>
+</html>
+
+

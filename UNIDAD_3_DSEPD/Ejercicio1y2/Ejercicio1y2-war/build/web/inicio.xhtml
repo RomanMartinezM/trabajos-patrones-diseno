@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+   <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            <h:form>
+                <h:outputLabel>ADIVINAR UN NÚMERO ENTRE UN RANGO</h:outputLabel>
+                <br/><br/>
+                <h:outputLabel for="lee_num">Valor entre #{numero.vMin} y #{numero.vMax}</h:outputLabel>
+                <h:inputText id="lee_num" value="#{numero.numeroa}" disabled="#{numero.isdisabled()}" required="true" requiredMessage="valor obligatorio" />
+                <br/>
+                <br/>
+                <table colspan="2">
+                    <tr align="center">
+                         <h:commandButton value="Aceptar" disabled="#{numero.isdisabled()}" action="inicio.xhtml" actionListener="#{numero.amensaje()}" />               
+                    </tr>
+                    <tr align="center">
+                         <h:commandButton value="Reiniciar" disabled="#{numero.isReinicio_habilitado()}" action="inicio.xhtml" actionListener="#{numero.volverAJugar()}"/>
+                    </tr>
+                </table>
+                <br/>
+                <h:outputLabel> INTENTOS RESTANTES #{numero.intentos} </h:outputLabel> 
+                <br/><br/>
+                <h:outputLabel> #{numero.mensaje} </h:outputLabel>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+

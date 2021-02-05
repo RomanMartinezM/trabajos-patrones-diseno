@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+         <h:form>
+                        <h1><h:outputText value="Jugadas Realizadas"/></h1>
+                        <h:dataTable value="#{ahorcado.lista_ju()}" var="item">
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="IdJuegousu"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idJuegousu}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentosr"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentosr}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Intentost"/>
+                                </f:facet>
+                                <h:outputText value="#{item.intentost}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="FechaHora"/>
+                                </f:facet>
+                                <h:outputText value="#{item.fechaHora}">
+                                    <f:convertDateTime pattern="MM/dd/yyyy" />
+                                </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Idpalabra"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idpalabra.palabra}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Idusuario"/>
+                                </f:facet>
+                                <h:outputText value="#{item.idusuario.nombre}"/>
+                            </h:column>
+                        </h:dataTable>
+                    <br/><br/>
+                    <h:commandLink value="Menu" action="configurar.xhtml" />
+                  
+
+                    </h:form>
+        </center>
+    </h:body>
+</html>
+

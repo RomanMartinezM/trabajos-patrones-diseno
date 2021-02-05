@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/juego/ListarPalabras.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/juego/ListarTipos.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/juego/AgregarTipoPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/Controladora.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/web/agregar_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/juego/ReglasNegocio.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/exceptions/RollbackFailureException.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/modelo/Palabras.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/exceptions/PreexistingEntityException.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/web/agregar_tipo_palabra.jsp</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/exceptions/NonexistentEntityException.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/TiposJpaController.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/PalabrasJpaController.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/modelo/Tipos.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/controles/exceptions/IllegalOrphanException.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/src/java/juego/AgregarPalabra.java</file>
+            <file>file:/C:/Users/lithium/Documents/NetBeansProjects/UNIDAD_2_DSEPD/Juego_2%20_MFabricacion/web/index.jsp</file>
+        </group>
+    </open-files>
+</project-private>

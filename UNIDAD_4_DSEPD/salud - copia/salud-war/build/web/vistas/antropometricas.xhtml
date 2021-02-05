@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/template_1.xhtml">
+
+            <ui:define name="encabezado">
+                <center>
+                    Medidas Antropométricas
+                </center>
+               
+            </ui:define>
+
+            <ui:define name="contenido">
+                <center>
+                    <f:view>
+
+
+                        <h:form>
+                            <h1><h:outputText value="Registro Medidas Antropométricas"/></h1>
+                            <h:panelGrid columns="2">     
+                                <h:outputLabel value="Fecha:" for="fecha" />
+                                <h:inputText id="fecha" value="#{salud.fecha_reg_antro}" title="Fecha" />          
+                                <h:outputLabel value="Peso:" for="peso" />
+                                <h:inputText id="peso" value="#{salud.antropometricos.peso}" title="Peso" />
+                                <h:outputLabel value="Cintura:" for="cintura" />
+                                <h:inputText id="cintura" value="#{salud.antropometricos.cintura}" title="Cintura" />
+                                <h:outputLabel value="Cadera:" for="cadera" />
+                                <h:inputText id="cadera" value="#{salud.antropometricos.cadera}" title="Cadera" />
+                                <h:outputLabel value="IdUsu:" for="idUsu" />
+                                <h:selectOneMenu id="idUsu" value="#{salud.usuarios.idUsuario}" title="IdUsu" >
+                                    <!-- TODO: update below reference to list of available items-->         
+                                    <f:selectItems value="#{salud.lista_u()}" var="vusuario" itemLabel="#{vusuario.nombre}" itemValue="#{vusuario.idUsuario}"/>
+                                </h:selectOneMenu>
+                            </h:panelGrid>
+                            <h:commandButton value="Guardar" actionListener="#{salud.registrar_antropometricos}"/>
+                            <br/>
+                            <h:commandLink value="Index" action="index.xhtml" />
+                            
+                            
+
+
+                            <h:form>
+                                <h1><h:outputText value="List"/></h1>
+                                <h:dataTable value="#{salud.lista_antro()}" var="item">
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="IdAntro"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.idAntro}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Fecha"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.fecha}">
+                                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                                        </h:outputText>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Peso"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.peso}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Cintura"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.cintura}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Cadera"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.cadera}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="IdUsu"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.idUsu.nombre}"/>
+                                    </h:column>
+                                </h:dataTable>
+                            </h:form>
+
+                        </h:form>
+                    </f:view>
+                    
+                </center>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

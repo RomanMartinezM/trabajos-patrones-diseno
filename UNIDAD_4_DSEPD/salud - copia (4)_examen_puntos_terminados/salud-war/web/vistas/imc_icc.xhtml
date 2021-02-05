@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/template_2.xhtml">
+
+            <ui:define name="titulo">
+                Salud
+            </ui:define>
+
+            <ui:define name="encabezado">
+                <center><h3><h:outputText value="Bienvenido #{salud.user}" /></h3></center> <!-- value="Bienvenido #salud.user}"  -->
+                
+            </ui:define>
+
+            <ui:define name="contenido">
+                
+                <center> 
+                        <h:form>
+                            <br/><br/>
+                            <h:outputLabel>INDICADORES BASICOS DE RIESGOS DE SALUD:</h:outputLabel>
+                             <br/><br/>
+                            <h:outputLabel> Seleccione la fecha:</h:outputLabel>   
+                            <h:selectOneMenu id="idUsu" value="#{salud.a}" title="IdUsu" >    <!-- value="#salud.antropometricos_ulogeado.idAntro}" -->  
+                                <f:selectItems value="#{salud.lista_antro_por_idusuario()}" var="vantro" itemLabel="#{vantro.fecha}" itemValue="#{vantro.idAntro}" actionListener="#{salud.calculadatos}"/> <!-- actionListener="#salud.idantropometricos(vantro.idAntro)}"  -->
+                            </h:selectOneMenu>
+                            <br/><br/>
+                            <h:outputLabel value="a:" for="a" />
+                            <h:inputText id="result"  title="result" value="#{salud.a}" disabled="true"/>
+                            <br/><br/>
+                            <h:outputLabel> Anio Fecha Nacimiento:</h:outputLabel>   
+                            <h:inputText id="anionac" value="#{salud.mostrar().fechanac}"  > <!-- value="#salud.edad}"-->
+                                 <f:convertDateTime pattern="yyyy/MM/dd" timeZone="America/Mexico_city"/>
+                            </h:inputText>
+                            <br/><br/>
+                            <h:outputLabel> Edad:</h:outputLabel>   
+                            <h:outputText id="edad" value="#{salud.edadac}"  /> <!-- value="#salud.edad}"  --><!-- value="#salud.edad}"-->
+                            <br/><br/>
+                            <h:outputLabel> CALCULO DEL INDICE DE MASA CORPORAL(IMC)</h:outputLabel>  
+                            <br/>
+                            <h:outputLabel> Estatura(cms):</h:outputLabel> 
+                            <h:outputLabel id="estatura" value="#{salud.mostrar().estatura}" /> <!-- value="#salud.usuario_logeado.estatura}" --> <!--value="#salud.estatura}"-->
+                            <br/>
+                            <h:outputLabel> Peso(kgs):</h:outputLabel> 
+                            <h:outputLabel id="peso" value="#{salud.obtener_antros_user().peso}" />   <!-- value="#salud.antropometricos_ulogeado.peso}" -->  <!--value="#salud.peso}"-->                                
+                            <br/><br/>
+                            <h:outputLabel value="Su IMC es: #{salud.imc}"/>
+                            <!--<br/>-->
+                            <!--<h:commandButton value="CALCULAR IMC" actionListener="#salud.calcular_imc()}"/>-->
+                            <!--<br/>-->
+                            <br/><br/>
+                            
+                            <h:outputText value="CALCULO DEL INDICE DE CINTURA-CADERA(ICC)"/>
+                            <br/>
+                            <h:outputLabel value="Cintura(cms):"/>
+                            <h:outputLabel id="cintura" value="#{salud.obtener_antros_user().cintura}" title="Cintura" />  <!-- value="#salud.antropometricos_ulogeado.cintura}"  -->  <!--value="#salud.cintura}"-->
+                            <br/>
+                            <h:outputLabel value="Cadera(cms):"/>
+                            <h:outputLabel id="cadera" value="#{salud.obtener_antros_user().cadera}" title="Cadera" />  <!--  value="#salud.antropometricos_ulogeado.cadera}" --> <!--value="#salud.cadera}"-->
+                            <br/>
+                            <h:outputLabel value="Sexo:"/>
+                            <h:outputLabel id="sexo" value="#{salud.mostrar().sexo}" title="Sexo" />   <!--value="#salud.usuario_logeado.sexo}" -->  <!--value="#salud.sexo}"-->                        
+                            <br/><br/>
+                            <h:outputLabel value="Su ICC es: #{salud.icc}"/>
+                            <br/>
+                            <h:commandButton value="CALCULAR IMC-ICC" actionListener="#{salud.calculadatos}"/>
+                            <br/>
+                            <h:commandLink value="Estadisticas" action="estadisticas.xhtml" />
+                            <br/>
+                            <h:commandLink value="Salir" action="index.xhtml" />
+                            <!--<br/>-->
+                            <!--<h:commandButton value="CALCULAR ICC" actionListener="#salud.calcular_icc()}"/> -->
+                            <!--<br/>-->
+                        </h:form>
+                </center>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

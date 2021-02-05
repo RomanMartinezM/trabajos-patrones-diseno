@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../templates/template_1.xhtml">
+
+            <ui:define name="top">
+                Calculo kilocalorias
+            </ui:define>
+
+            <ui:define name="content">
+                <center>
+                         <h:form>
+                            <h1><h:outputText value="Proporcione los datos"/></h1>
+                            <h:panelGrid columns="2">
+                                <h:outputLabel value="Nombre:"/>
+                                <h:inputText id="nombre" value="#" title="Nombre" />
+                                <h:outputLabel value="Fecha nacimiento:"/>
+                                <h:inputText id="fechanaci" value="#" title="Fechanaci" /> 
+                                <h:outputLabel value="Estatura(mts):"></h:outputLabel> 
+                                <h:inputText id="estatura" value="#" requiredMessage="Estatura" />
+                                <h:outputLabel value="Peso(kgs):"></h:outputLabel> 
+                                <h:inputText id="peso" value="#" requiredMessage="Peso" />   
+                                <h:outputLabel value="Sexo:"/>
+                                <h:inputText id="sexo" value="#" title="Sexo" />     
+                                <h:outputLabel value="Actividad:"/>
+                                <h:inputText id="actividad" value="#" title="Actividad" />     
+                                
+                            </h:panelGrid>
+                            <h:commandButton value="Calcular calorias" actionListener="#"/>
+                            <br/>
+                            <h:outputLabel value=""/>
+                 
+                        </h:form>
+                </center>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
